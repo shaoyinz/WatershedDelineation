@@ -33,7 +33,12 @@ conda activate watershed
 conda install gdal
 pip install -r requirements.txt
 ```
+For run the code, you can either run the [`pipelineStarter.py`](pipelineStarter.py) directly or run the `catchmentDelineation.py` script with the following command:
 
+```bash
+python catchmentDelineation.py --dem your_dem.tif --pour_points your_pour_points.shp --output_dir your_output_directory
+```
 
 ## What's next?
 - Rebuild the core hydrological operations using Python.
+- Now I define stream by the flow accumulation threshold, which is not ideal. I should apply a more sophisticated method to define the stream network.
